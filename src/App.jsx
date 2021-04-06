@@ -36,7 +36,7 @@ export default class TodoAPP extends React.Component {
 
     componentDidMount = () => {
         this.setState({ items: todos });
-    }
+    };
 
     setValue = (event) => {
         const value = event.target.value;
@@ -86,8 +86,8 @@ export default class TodoAPP extends React.Component {
         this.setState({ items: newArray });
     };
 
-    removeItem = (e, item) => {
-        e.stopPropagation();
+    removeItem = (evt, item) => {
+        evt.stopPropagation();
 
         const items = this.state.items;
         const itemID = item.id;
@@ -101,7 +101,7 @@ export default class TodoAPP extends React.Component {
 
     setError = () => {
         this.setState({ error: false });
-  };
+    };
 
     render() {
         return (
